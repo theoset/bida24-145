@@ -1,0 +1,461 @@
+/* Base Styles */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    padding-top: 56px; /* For fixed navbar */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Hero Sections */
+.hero-section, .services-hero, .about-hero, .reviews-hero {
+    height: 70vh;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-section {
+    background-image: url('../images/hero-bg.jpg');
+}
+
+.services-hero {
+    background-image: url('../images/services-hero.jpg');
+}
+
+.about-hero {
+    background-image: url('../images/about-hero.jpg');
+}
+
+.reviews-hero {
+    background-image: url('../images/reviews-hero.jpg');
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-btn {
+    position: relative;
+    z-index: 1;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Feature Cards */
+.feature-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon img {
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon img {
+    transform: scale(1.1);
+}
+
+.feature-title {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.feature-text {
+    color: var(--secondary-color);
+}
+
+/* Video Section */
+.video-section video, .testimonial-video video {
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Call to Action */
+.cta-section {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+}
+
+.cta-text {
+    font-size: 1.2rem;
+}
+
+/* Services Page */
+.service-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.service-content {
+    background-color: white;
+}
+
+.service-title {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.service-text {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.service-features {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.service-features li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.service-features li:before {
+    content: '✓';
+    color: var(--success-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Pricing Cards */
+.pricing-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: white;
+    height: 100%;
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.pricing-header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.pricing-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.pricing-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.pricing-period {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.pricing-body {
+    text-align: center;
+}
+
+.pricing-features {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.pricing-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+/* About Page */
+.about-text {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.team-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+
+.team-name {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.team-position {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.team-bio {
+    color: #666;
+}
+
+.value-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.value-icon img {
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover .value-icon img {
+    transform: rotate(15deg);
+}
+
+.value-title {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.value-text {
+    color: var(--secondary-color);
+}
+
+.stats-section {
+    background-color: var(--primary-color);
+}
+
+.stat-item {
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Reviews Page */
+.review-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+}
+
+.review-rating {
+    color: var(--warning-color);
+    font-size: 1.5rem;
+}
+
+.review-text {
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.author-name {
+    color: var(--primary-color);
+}
+
+.author-info {
+    font-size: 0.9rem;
+}
+
+.testimonial-name {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.review-form {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    color: var(--primary-color);
+}
+
+.rating-stars {
+    font-size: 1.5rem;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.rating-stars .star:hover,
+.rating-stars .star.active {
+    color: var(--warning-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+}
+
+.footer-heading {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color) !important;
+}
+
+.footer-copyright {
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .feature-card, .service-card, .pricing-card, .team-card, .value-card, .review-card {
+        margin-bottom: 30px;
+    }
+    
+    .pricing-card.featured {
+        transform: none;
+    }
+}
